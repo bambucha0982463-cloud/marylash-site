@@ -7,8 +7,11 @@
 После публикации сайта — в Instagram: Редагувати профіль → Сайт:
 
 ```
-https://bambucha0982463-cloud.github.io/marylash-site/
+https://marylash.eu
 ```
+
+(старый адрес https://bambucha0982463-cloud.github.io/marylash-site/
+автоматически перенаправляет на marylash.eu)
 
 Строка био (замена «📝для запису в Direct», сайт закрывает вопрос прайса):
 
