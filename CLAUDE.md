@@ -26,10 +26,21 @@ https://www.instagram.com/_marylash_ (@_marylash_, осн. страница @mar
 
 ## Стек и хостинг
 
-Статический HTML/CSS/vanilla JS (Node на машине нет), GitHub Pages.
-Язык сайта — украинский. Дизайн — по скиллу frontend-design; превью — Stitch MCP.
+Статический HTML/CSS/vanilla JS (Node на машине нет), GitHub Pages:
+https://bambucha0982463-cloud.github.io/marylash-site/
+(repo bambucha0982463-cloud/marylash-site, ветка master, Pages legacy build).
 
-## Статус
+**Языки:** словацкий — основной (в разметке), EN/HU/UA — через `js/i18n.js`
+(data-i18n атрибуты, словарь на 4 языка, выбор в localStorage, автодетект
+по navigator.language). Новые тексты добавлять сразу во все 4 словаря.
 
-Материалы собраны (2026-07-02). Дальше: дизайн → код → превью владельцу →
-публикация на GitHub Pages (push только с подтверждения).
+## Статус (2026-07-02)
+
+Сайт ОПУБЛИКОВАН и расширен: hero (+трастовая строка), Služby (3 карточки),
+Cenník (стиль её сторис), Moje práce (12 фото), O mne (портрет самой Марины
+— `assets/img/maryna.jpg`, взят с @maryna_zmr, фото 06; НЕ portrait.jpg —
+тот был клиенткой и переименован для сброса кэшей), FAQ (4 вопроса,
+details/summary), Objednávka. Промо-материалы: `promo/PROMO.md` + qr-site.png.
+
+Идеи дальше: словацкая печатная визитка с QR, отзывы клиенток, до/после,
+custom-домен (владелец пока отложил).
