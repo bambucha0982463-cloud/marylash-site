@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="sk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MaryLash — ламінування, нарощування вій і брови · Дунайська Стреда</title>
-<meta name="description" content="MaryLash — ламінування вій та брів, нарощування вій, корекція і фарбування брів у Дунайській Стреді (Dunajská Streda, Словаччина). Майстер Марина. Запис у Instagram Direct @_marylash_ або за телефоном.">
-<meta property="og:title" content="MaryLash — вії та брови, які запамʼятовують">
-<meta property="og:description" content="Ламінування, нарощування вій і догляд за бровами. Запис у Direct @_marylash_.">
+<title>MaryLash — laminácia, predlžovanie mihalníc a obočie · Dunajská Streda</title>
+<meta name="description" content="MaryLash — laminácia mihalníc a obočia, predlžovanie mihalníc, úprava a farbenie obočia v Dunajskej Strede. Majsterka Maryna. Objednávky cez Instagram Direct @_marylash_ alebo telefonicky.">
+<meta property="og:title" content="MaryLash — mihalnice a obočie · Dunajská Streda">
+<meta property="og:description" content="Laminácia, predlžovanie mihalníc a starostlivosť o obočie. Objednávky v Directe @_marylash_.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://bambucha0982463-cloud.github.io/marylash-site/assets/img/hero.jpg">
 <link rel="canonical" href="https://bambucha0982463-cloud.github.io/marylash-site/">
@@ -20,11 +20,12 @@
   "@context": "https://schema.org",
   "@type": "BeautySalon",
   "name": "MaryLash",
-  "description": "Ламінування вій та брів, нарощування вій, корекція і фарбування брів.",
+  "description": "Laminácia mihalníc a obočia, predlžovanie mihalníc, úprava a farbenie obočia.",
   "telephone": "+380974965834",
   "address": {"@type": "PostalAddress", "addressLocality": "Dunajská Streda", "addressCountry": "SK"},
   "sameAs": ["https://www.instagram.com/_marylash_/"],
-  "priceRange": "4€–48€"
+  "priceRange": "4€–48€",
+  "knowsLanguage": ["sk", "en", "hu", "uk"]
 }
 </script>
 </head>
@@ -32,12 +33,21 @@
 
 <header class="nav" id="top">
   <a class="nav__logo" href="#top">MARY<span>LASH</span></a>
-  <nav class="nav__links" aria-label="Розділи">
-    <a href="#price">Прайс</a>
-    <a href="#works">Роботи</a>
-    <a href="#about">Про майстра</a>
+  <nav class="nav__links" aria-label="Sekcie">
+    <a href="#services" data-i18n="nav.services">Služby</a>
+    <a href="#price" data-i18n="nav.price">Cenník</a>
+    <a href="#works" data-i18n="nav.works">Práce</a>
+    <a href="#about" data-i18n="nav.about">O mne</a>
   </nav>
-  <a class="btn btn--small" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener">Записатися</a>
+  <div class="nav__right">
+    <div class="lang" role="group" aria-label="Jazyk">
+      <button type="button" data-lang="sk" aria-pressed="true">SK</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="hu" aria-pressed="false">HU</button>
+      <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+    </div>
+    <a class="btn btn--small" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener" data-i18n="nav.cta">Objednať sa</a>
+  </div>
 </header>
 
 <main>
@@ -45,17 +55,22 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero__text">
-    <p class="eyebrow reveal">lash &amp; brow &middot; Дунайська Стреда</p>
-    <h1 class="hero__title reveal">Погляд, який запамʼятовують.</h1>
-    <p class="hero__sub reveal">Ламінування, нарощування вій і догляд за бровами —
-      акуратно, безпечно, з увагою до деталей.</p>
+    <p class="eyebrow reveal">lash &amp; brow &middot; Dunajská Streda</p>
+    <h1 class="hero__title reveal" data-i18n="hero.title">Pohľad, ktorý si zapamätajú.</h1>
+    <p class="hero__sub reveal" data-i18n="hero.sub">Laminácia, predlžovanie mihalníc a starostlivosť
+      o obočie — precízne, bezpečne a s citom pre detail.</p>
+    <ul class="hero__trust reveal">
+      <li data-i18n="hero.trust1">Overené materiály</li>
+      <li data-i18n="hero.trust2">Sterilné nástroje</li>
+      <li data-i18n="hero.trust3">Individuálny prístup</li>
+    </ul>
     <div class="hero__cta reveal">
-      <a class="btn" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener">Записатися в Direct</a>
+      <a class="btn" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener" data-i18n="hero.cta">Napísať na Instagram</a>
       <a class="link-quiet" href="tel:+380974965834">+380 97 496 58 34</a>
     </div>
   </div>
   <figure class="hero__photo reveal">
-    <img src="assets/img/hero.jpg" alt="Ламінування вій і брів — робота майстра MaryLash крупним планом" width="1320" height="1478">
+    <img src="assets/img/hero.jpg" alt="MaryLash — laminácia mihalníc a obočia zblízka" width="1320" height="1478">
   </figure>
 </section>
 
@@ -76,42 +91,65 @@
   </svg>
 </div>
 
-<!-- ============ ПРАЙС ============ -->
+<!-- ============ SLUŽBY ============ -->
+<section class="section" id="services">
+  <h2 class="section__title reveal" data-i18n="services.title">Služby</h2>
+  <div class="services">
+    <article class="services__card reveal">
+      <h3 data-i18n="services.s1t">Laminácia mihalníc a obočia</h3>
+      <p data-i18n="services.s1x">Vaše prirodzené mihalnice — krajšie ohnuté a tmavšie,
+        obočie upravené a poslušné. Efekt vydrží 6–8 týždňov, bez maskary
+        a bez rannej námahy.</p>
+    </article>
+    <article class="services__card reveal">
+      <h3 data-i18n="services.s2t">Predlžovanie mihalníc</h3>
+      <p data-i18n="services.s2x">Klasika pre prirodzený vzhľad alebo objem 2D–4D pre
+        výraznejší pohľad. Dĺžku, ohyb aj tvar prispôsobím vašim črtám.</p>
+    </article>
+    <article class="services__card reveal">
+      <h3 data-i18n="services.s3t">Obočie</h3>
+      <p data-i18n="services.s3x">Úprava tvaru a farbenie. Tvar navrhnem podľa vašej
+        tváre — výsledok pôsobí prirodzene, nie nakreslene.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CENNÍK ============ -->
 <section class="section" id="price">
-  <h2 class="section__title reveal">Прайс</h2>
+  <h2 class="section__title reveal" data-i18n="price.title">Cenník</h2>
 
   <div class="price">
     <div class="price__group reveal">
-      <h3 class="price__cat">Вії</h3>
+      <h3 class="price__cat" data-i18n="price.g1">Mihalnice</h3>
       <ul>
-        <li><span>Класичне нарощення</span><i></i><b>20&nbsp;€</b></li>
-        <li><span>Нарощення 2D</span><i></i><b>25&nbsp;€</b></li>
-        <li><span>Нарощення 3D–4D</span><i></i><b>30&nbsp;€</b></li>
-        <li><span>Зняття вій після іншого майстра</span><i></i><b>5&nbsp;€</b></li>
+        <li><span data-i18n="price.i1">Klasické predĺženie</span><i></i><b>20&nbsp;€</b></li>
+        <li><span data-i18n="price.i2">Objem 2D</span><i></i><b>25&nbsp;€</b></li>
+        <li><span data-i18n="price.i3">Objem 3D–4D</span><i></i><b>30&nbsp;€</b></li>
+        <li><span data-i18n="price.i4">Odstránenie po inej majsterke</span><i></i><b>5&nbsp;€</b></li>
       </ul>
     </div>
 
     <div class="price__group reveal">
-      <h3 class="price__cat">Брови</h3>
+      <h3 class="price__cat" data-i18n="price.g2">Obočie</h3>
       <ul>
-        <li><span>Корекція брів</span><i></i><b>10&nbsp;€</b></li>
-        <li><span>Фарбування брів або вій</span><i></i><b>10&nbsp;€</b></li>
-        <li><span>Корекція + фарбування брів</span><i></i><b>15&nbsp;€</b></li>
+        <li><span data-i18n="price.i5">Úprava obočia</span><i></i><b>10&nbsp;€</b></li>
+        <li><span data-i18n="price.i6">Farbenie obočia alebo mihalníc</span><i></i><b>10&nbsp;€</b></li>
+        <li><span data-i18n="price.i7">Úprava + farbenie obočia</span><i></i><b>15&nbsp;€</b></li>
       </ul>
     </div>
 
     <div class="price__group reveal">
-      <h3 class="price__cat">Ламінування</h3>
+      <h3 class="price__cat" data-i18n="price.g3">Laminácia</h3>
       <ul>
-        <li><span>Ламінування + фарбування вій</span><i></i><b>25&nbsp;€</b></li>
-        <li><span>Ламінування + фарбування брів</span><i></i><b>25&nbsp;€</b></li>
-        <li><span>Ламінування вій та брів</span><i></i><b>48&nbsp;€</b></li>
+        <li><span data-i18n="price.i8">Laminácia + farbenie mihalníc</span><i></i><b>25&nbsp;€</b></li>
+        <li><span data-i18n="price.i9">Laminácia + farbenie obočia</span><i></i><b>25&nbsp;€</b></li>
+        <li><span data-i18n="price.i10">Laminácia mihalníc aj obočia</span><i></i><b>48&nbsp;€</b></li>
       </ul>
     </div>
 
-    <p class="price__note reveal">Додатково: видалення волосся над губою — 4&nbsp;€.
-      Запис і відповіді на питання — у
-      <a href="https://ig.me/m/_marylash_" target="_blank" rel="noopener">Direct</a>.</p>
+    <p class="price__note reveal"><span data-i18n="price.note">Navyše: odstránenie chĺpkov nad perou — 4 €.
+      Objednávky a otázky —</span>
+      <a href="https://ig.me/m/_marylash_" target="_blank" rel="noopener">Instagram Direct</a>.</p>
   </div>
 </section>
 
@@ -132,22 +170,25 @@
   </svg>
 </div>
 
-<!-- ============ РОБОТИ ============ -->
+<!-- ============ MOJE PRÁCE ============ -->
 <section class="section" id="works">
-  <h2 class="section__title reveal">Роботи</h2>
+  <h2 class="section__title reveal" data-i18n="works.title">Moje práce</h2>
   <div class="works">
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-01.jpg" alt="Ламінування вій — результат"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-02.jpg" alt="Моделювання та фарбування брів"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-03.jpg" alt="Нарощування вій — природний ефект"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-04.jpg" alt="Ламінування вій і оформлення брів"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-05.jpg" alt="Ламінування вій крупним планом"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-06.jpg" alt="Ламінування вій — відкритий погляд"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-07.jpg" alt="Брови після корекції та фарбування"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-09.jpg" alt="Процес ламінування — макро, чорно-біле фото"></figure>
-    <figure class="reveal"><img loading="lazy" src="assets/img/work-10.jpg" alt="Вії після ламінування — макро"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-01.jpg" alt="Laminácia mihalníc — výsledok"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-02.jpg" alt="Úprava a farbenie obočia"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-03.jpg" alt="Predĺžené mihalnice — prirodzený efekt"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-04.jpg" alt="Laminácia mihalníc a úprava obočia"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-05.jpg" alt="Laminácia mihalníc zblízka"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-06.jpg" alt="Laminácia mihalníc — otvorený pohľad"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-11.jpg" alt="Prirodzené predĺženie mihalníc"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-07.jpg" alt="Obočie po úprave a farbení"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-12.jpg" alt="Laminácia mihalníc a obočia — výsledok"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-09.jpg" alt="Proces laminácie — makro, čiernobiele"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-10.jpg" alt="Mihalnice po laminácii — makro"></figure>
+    <figure class="reveal"><img loading="lazy" src="assets/img/work-08.jpg" alt="Pracovné miesto — farba na obočie v tvare srdca"></figure>
   </div>
-  <p class="works__more reveal">Більше робіт — в
-    <a href="https://www.instagram.com/_marylash_/" target="_blank" rel="noopener">Instagram @_marylash_</a></p>
+  <p class="works__more reveal"><span data-i18n="works.more">Viac prác na Instagrame</span>
+    <a href="https://www.instagram.com/_marylash_/" target="_blank" rel="noopener">@_marylash_</a></p>
 </section>
 
 <div class="lashline" aria-hidden="true">
@@ -167,44 +208,74 @@
   </svg>
 </div>
 
-<!-- ============ ПРО МАЙСТРА ============ -->
+<!-- ============ O MNE ============ -->
 <section class="section about" id="about">
   <figure class="about__photo reveal">
-    <img loading="lazy" src="assets/img/work-08.jpg" alt="Робоче місце майстра MaryLash — паста для брів у формі серця">
+    <img loading="lazy" src="assets/img/maryna.jpg" alt="Maryna — majsterka MaryLash">
   </figure>
   <div class="about__text">
-    <h2 class="section__title reveal">Про майстра</h2>
-    <p class="reveal">Мене звати Марина. Я працюю з віями та бровами так, щоб
-      підкреслити те, що у вас вже є — а не сховати вас за «ефектом».</p>
-    <p class="reveal">Використовую перевірені матеріали, стежу за стерильністю
-      і завжди підбираю форму та вигин під ваші риси. Після процедури розповім,
-      як доглядати за результатом, щоб він тримався якнайдовше.</p>
-    <p class="reveal">Найкращий комплімент для мене — коли ви дивитесь у дзеркало
-      і всміхаєтесь.</p>
+    <h2 class="section__title reveal" data-i18n="about.title">O mne</h2>
+    <p class="reveal" data-i18n="about.p1">Volám sa Maryna. S mihalnicami a obočím pracujem tak,
+      aby som zvýraznila to, čo už máte — nie aby som vás schovala za „efekt“.</p>
+    <p class="reveal" data-i18n="about.p2">Používam overené materiály, dbám na sterilitu a tvar
+      aj ohyb vždy prispôsobím vašim črtám. Po procedúre vám poradím, ako sa
+      o výsledok starať, aby vydržal čo najdlhšie.</p>
+    <p class="reveal" data-i18n="about.p3">Najkrajší kompliment pre mňa je, keď sa pozriete
+      do zrkadla a usmejete sa.</p>
   </div>
 </section>
 
-<!-- ============ ЗАПИС ============ -->
+<!-- ============ ČASTÉ OTÁZKY ============ -->
+<section class="section" id="faq">
+  <h2 class="section__title reveal" data-i18n="faq.title">Časté otázky</h2>
+  <div class="faq">
+    <details class="reveal">
+      <summary data-i18n="faq.q1">Ako dlho vydrží laminácia?</summary>
+      <p data-i18n="faq.a1">Zvyčajne 6–8 týždňov — podľa toho, ako rýchlo rastú vaše
+        mihalnice. Potom sa prirodzene vrátia do pôvodného stavu, procedúru
+        možno zopakovať.</p>
+    </details>
+    <details class="reveal">
+      <summary data-i18n="faq.q2">Poškodí predlžovanie moje mihalnice?</summary>
+      <p data-i18n="faq.a2">Nie. Pri správnej aplikácii a bežnej starostlivosti sú vaše
+        mihalnice v bezpečí — používam ľahké materiály a lepidlo šetrné k očiam.</p>
+    </details>
+    <details class="reveal">
+      <summary data-i18n="faq.q3">Ako sa pripraviť na procedúru?</summary>
+      <p data-i18n="faq.a3">Príďte odlíčená — bez maskary a očných krémov. Všetko ostatné
+        zariadim ja.</p>
+    </details>
+    <details class="reveal">
+      <summary data-i18n="faq.q4">Ako dlho procedúra trvá?</summary>
+      <p data-i18n="faq.a4">Laminácia približne hodinu, predlžovanie 1,5–2,5 hodiny podľa
+        objemu. Ležíte pohodlne so zatvorenými očami — mnohé klientky si aj pospia.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ OBJEDNÁVKA ============ -->
 <section class="booking" id="booking">
   <div class="booking__frame reveal">
-    <p class="eyebrow">запис</p>
-    <h2 class="booking__title">Побачимось?</h2>
-    <p class="booking__sub">Напишіть у Direct — підберемо процедуру і зручний час.</p>
+    <p class="eyebrow" data-i18n="booking.eyebrow">objednávka</p>
+    <h2 class="booking__title" data-i18n="booking.title">Uvidíme sa?</h2>
+    <p class="booking__sub" data-i18n="booking.sub">Napíšte mi do Directu — vyberieme procedúru
+      aj termín, ktorý vám sedí.</p>
     <div class="booking__actions">
-      <a class="btn" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener">Записатися в Direct</a>
-      <a class="btn btn--ghost" href="tel:+380974965834">Подзвонити</a>
+      <a class="btn" href="https://ig.me/m/_marylash_" target="_blank" rel="noopener" data-i18n="booking.b1">Napísať na Instagram</a>
+      <a class="btn btn--ghost" href="tel:+380974965834" data-i18n="booking.b2">Zavolať</a>
     </div>
-    <p class="booking__phone">@_marylash_ &middot; +380 97 496 58 34 &middot; Дунайська Стреда, Словаччина</p>
+    <p class="booking__phone">@_marylash_ &middot; +380 97 496 58 34 &middot; Dunajská Streda</p>
   </div>
 </section>
 
 </main>
 
 <footer class="footer">
-  <span>MARYLASH &middot; вії та брови &middot; Dunajská Streda</span>
+  <span data-i18n="footer.line">MARYLASH &middot; mihalnice a obočie &middot; Dunajská Streda</span>
   <a href="https://www.instagram.com/_marylash_/" target="_blank" rel="noopener">Instagram</a>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

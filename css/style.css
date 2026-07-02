@@ -123,6 +123,32 @@ a { color: inherit; }
 
 .nav__links a:hover { color: var(--cream); }
 
+.nav__right { display: flex; align-items: center; gap: 1.1rem; }
+
+/* переключатель языков */
+.lang { display: flex; gap: .15rem; }
+
+.lang button {
+  font-family: var(--body);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--latte);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: .3rem .55rem;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+
+.lang button:hover { color: var(--cream); }
+
+.lang button[aria-pressed="true"] {
+  color: var(--cream);
+  border-color: var(--line);
+}
+
 /* ============ hero ============ */
 .hero {
   display: grid;
@@ -154,6 +180,28 @@ a { color: inherit; }
   flex-wrap: wrap;
   gap: 1.6rem;
   margin-top: 2.4rem;
+}
+
+/* трастовая строка под подзаголовком */
+.hero__trust {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.6rem;
+  margin-top: 1.4rem;
+}
+
+.hero__trust li {
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--latte);
+}
+
+.hero__trust li::before {
+  content: '·';
+  color: var(--blush);
+  margin-right: .55rem;
 }
 
 /* фото в «миндальной» маске — лист/глаз */
@@ -209,6 +257,83 @@ a { color: inherit; }
   padding: clamp(3.5rem, 9vh, 6.5rem) var(--pad);
   max-width: 72rem;
   margin: 0 auto;
+}
+
+/* ============ услуги ============ */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.services__card {
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  transition: border-color .3s;
+}
+
+.services__card:hover { border-color: var(--blush); }
+
+.services__card h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+
+.services__card p {
+  color: var(--latte);
+  font-size: .95rem;
+}
+
+/* ============ FAQ ============ */
+.faq {
+  max-width: 46rem;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 1.1rem 2rem 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: '+';
+  position: absolute;
+  right: .2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--blush);
+  transition: transform .25s;
+}
+
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq summary:hover { color: var(--blush); }
+
+.faq details p {
+  color: var(--latte);
+  font-size: .95rem;
+  padding: 0 0 1.3rem;
+  max-width: 40rem;
 }
 
 /* ============ прайс (стиль её сторис) ============ */
@@ -383,6 +508,16 @@ a { color: inherit; }
 /* ============ мобильная версия ============ */
 @media (max-width: 860px) {
   .nav__links { display: none; }
+
+  .nav { padding-inline: 1rem; }
+
+  .nav .btn--small { display: none; }
+
+  .lang button { padding: .3rem .4rem; }
+
+  .services { grid-template-columns: 1fr; }
+
+  .hero__trust { justify-content: center; }
 
   .hero {
     grid-template-columns: 1fr;
