@@ -6,6 +6,7 @@ const I18N = {
     'nav.works': 'Práce',
     'nav.about': 'O mne',
     'nav.cta': 'Objednať sa',
+    'hero.eyebrow': 'lash & brow · Dunajská Streda',
     'hero.title': 'Pohľad, ktorý si zapamätajú.',
     'hero.sub': 'Laminácia, predlžovanie mihalníc a starostlivosť o obočie — precízne, bezpečne a s citom pre detail.',
     'hero.trust1': 'Overené materiály',
@@ -36,6 +37,8 @@ const I18N = {
     'price.note': 'Navyše: odstránenie chĺpkov nad perou — 4 €. Objednávky a otázky —',
     'works.title': 'Moje práce',
     'works.more': 'Viac prác na Instagrame',
+    'reviews.title': 'Klientky píšu',
+    'reviews.note': 'Z komentárov na Instagrame',
     'about.title': 'O mne',
     'about.p1': 'Volám sa Maryna. S mihalnicami a obočím pracujem tak, aby som zvýraznila to, čo už máte — nie aby som vás schovala za „efekt“.',
     'about.p2': 'Používam overené materiály, dbám na sterilitu a tvar aj ohyb vždy prispôsobím vašim črtám. Po procedúre vám poradím, ako sa o výsledok starať, aby vydržal čo najdlhšie.',
@@ -54,6 +57,7 @@ const I18N = {
     'booking.sub': 'Napíšte mi do Directu — vyberieme procedúru aj termín, ktorý vám sedí.',
     'booking.b1': 'Napísať na Instagram',
     'booking.b2': 'Zavolať',
+    'booking.meta': '@_marylash_ · +380 97 496 58 34 · Dunajská Streda',
     'footer.line': 'MARYLASH · mihalnice a obočie · Dunajská Streda'
   },
 
@@ -63,6 +67,7 @@ const I18N = {
     'nav.works': 'My work',
     'nav.about': 'About',
     'nav.cta': 'Book now',
+    'hero.eyebrow': 'lash & brow · Dunajská Streda',
     'hero.title': 'A look they remember.',
     'hero.sub': 'Lash lamination, extensions and brow care — precise, safe, with an eye for detail.',
     'hero.trust1': 'Trusted materials',
@@ -93,6 +98,8 @@ const I18N = {
     'price.note': 'Extra: upper-lip hair removal — 4 €. Booking and questions —',
     'works.title': 'My work',
     'works.more': 'More work on Instagram',
+    'reviews.title': 'Clients say',
+    'reviews.note': 'From Instagram comments',
     'about.title': 'About me',
     'about.p1': 'My name is Maryna. I work with lashes and brows to bring out what you already have — not to hide you behind an "effect".',
     'about.p2': 'I use trusted materials, keep everything sterile, and always match the shape and curl to your features. Afterwards I\'ll tell you how to care for the result so it lasts as long as possible.',
@@ -111,6 +118,7 @@ const I18N = {
     'booking.sub': 'Message me on Instagram — we\'ll pick the right procedure and a time that suits you.',
     'booking.b1': 'Message on Instagram',
     'booking.b2': 'Call',
+    'booking.meta': '@_marylash_ · +380 97 496 58 34 · Dunajská Streda',
     'footer.line': 'MARYLASH · lashes & brows · Dunajská Streda'
   },
 
@@ -120,6 +128,7 @@ const I18N = {
     'nav.works': 'Munkáim',
     'nav.about': 'Rólam',
     'nav.cta': 'Időpontfoglalás',
+    'hero.eyebrow': 'lash & brow · Dunaszerdahely',
     'hero.title': 'Tekintet, amit nem felejtenek el.',
     'hero.sub': 'Szempilla-laminálás, szempillahosszabbítás és szemöldökformázás — precízen, biztonságosan, odafigyeléssel minden részletre.',
     'hero.trust1': 'Bevált anyagok',
@@ -150,6 +159,8 @@ const I18N = {
     'price.note': 'Ezen felül: szőrtelenítés a felső ajak felett — 4 €. Időpont és kérdések —',
     'works.title': 'Munkáim',
     'works.more': 'További munkák Instagramon',
+    'reviews.title': 'Vendégeim írták',
+    'reviews.note': 'Instagram-kommentekből',
     'about.title': 'Rólam',
     'about.p1': 'Maryna vagyok. Úgy dolgozom a szempillákkal és a szemöldökkel, hogy azt emeljem ki, ami már megvan — nem rejtem el egy „effekt” mögé.',
     'about.p2': 'Bevált anyagokkal dolgozom, ügyelek a sterilitásra, a formát és az ívet mindig az arcvonásokhoz igazítom. A kezelés után elmondom, hogyan ápolja az eredményt, hogy minél tovább tartson.',
@@ -168,7 +179,8 @@ const I18N = {
     'booking.sub': 'Írjon Instagramon — kiválasztjuk a megfelelő kezelést és az Önnek kényelmes időpontot.',
     'booking.b1': 'Írok Instagramon',
     'booking.b2': 'Hívás',
-    'footer.line': 'MARYLASH · szempillák és szemöldök · Dunajská Streda'
+    'booking.meta': '@_marylash_ · +380 97 496 58 34 · Dunaszerdahely',
+    'footer.line': 'MARYLASH · szempillák és szemöldök · Dunaszerdahely'
   },
 
   uk: {
@@ -177,6 +189,7 @@ const I18N = {
     'nav.works': 'Роботи',
     'nav.about': 'Про мене',
     'nav.cta': 'Записатися',
+    'hero.eyebrow': 'lash & brow · Дунайська Стреда',
     'hero.title': 'Погляд, який запамʼятовують.',
     'hero.sub': 'Ламінування, нарощування вій і догляд за бровами — акуратно, безпечно, з увагою до деталей.',
     'hero.trust1': 'Перевірені матеріали',
@@ -207,6 +220,8 @@ const I18N = {
     'price.note': 'Додатково: видалення волосся над губою — 4 €. Запис і питання —',
     'works.title': 'Мої роботи',
     'works.more': 'Більше робіт в Instagram',
+    'reviews.title': 'Клієнтки пишуть',
+    'reviews.note': 'З коментарів в Instagram',
     'about.title': 'Про мене',
     'about.p1': 'Мене звати Марина. Я працюю з віями та бровами так, щоб підкреслити те, що у вас вже є — а не сховати вас за «ефектом».',
     'about.p2': 'Використовую перевірені матеріали, стежу за стерильністю і завжди підбираю форму та вигин під ваші риси. Після процедури розповім, як доглядати за результатом, щоб він тримався якнайдовше.',
@@ -225,6 +240,7 @@ const I18N = {
     'booking.sub': 'Напишіть у Direct — підберемо процедуру і зручний час.',
     'booking.b1': 'Записатися в Direct',
     'booking.b2': 'Подзвонити',
+    'booking.meta': '@_marylash_ · +380 97 496 58 34 · Дунайська Стреда',
     'footer.line': 'MARYLASH · вії та брови · Дунайська Стреда'
   }
 };

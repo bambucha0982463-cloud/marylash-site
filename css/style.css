@@ -419,6 +419,41 @@ a { color: inherit; }
 
 .works__more a { color: var(--blush); }
 
+/* ============ отзывы (цитаты из комментариев) ============ */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.reviews__card {
+  border-top: 1px solid var(--line);
+  padding-top: 1.3rem;
+}
+
+.reviews__card blockquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.reviews__card figcaption {
+  margin-top: .8rem;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  color: var(--blush);
+}
+
+.reviews__note {
+  margin-top: 2rem;
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--latte);
+}
+
 /* ============ про майстра ============ */
 .about {
   display: grid;
@@ -534,6 +569,11 @@ a { color: inherit; }
   .price { grid-template-columns: 1fr; }
 
   .works { grid-template-columns: repeat(2, 1fr); }
+
+  /* нечётный последний кадр — на всю ширину, без пустой ячейки */
+  .works figure:last-child:nth-child(odd) { grid-column: span 2; }
+
+  .reviews { grid-template-columns: 1fr 1fr; }
 
   .about { grid-template-columns: 1fr; }
 
