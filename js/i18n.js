@@ -280,8 +280,21 @@ function setLang(lang) {
   try { localStorage.setItem('marylash-lang', lang); } catch (e) {}
 }
 
+// плавное перетекание контента при смене языка
+function switchLang(lang) {
+  if (document.documentElement.lang === lang) return;
+  const main = document.querySelector('main');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !main) { setLang(lang); return; }
+  main.classList.add('i18n-fade');
+  setTimeout(() => {
+    setLang(lang);
+    main.classList.remove('i18n-fade');
+  }, 160);
+}
+
 document.querySelectorAll('.lang button').forEach((b) => {
-  b.addEventListener('click', () => setLang(b.dataset.lang));
+  b.addEventListener('click', () => switchLang(b.dataset.lang));
 });
 
 // збережена мова або мова браузера; типово — словацька

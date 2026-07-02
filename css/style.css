@@ -62,10 +62,17 @@ a { color: inherit; }
   border-radius: 999px;
   padding: .95rem 2.1rem;
   text-decoration: none;
-  transition: background .25s, color .25s, border-color .25s;
+  transition: background .25s, color .25s, border-color .25s, transform .25s, box-shadow .25s;
 }
 
-.btn:hover { background: var(--blush); border-color: var(--blush); }
+.btn:hover {
+  background: var(--blush);
+  border-color: var(--blush);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+}
+
+.btn:active { transform: translateY(0); box-shadow: none; }
 
 .btn--ghost {
   background: transparent;
@@ -119,9 +126,14 @@ a { color: inherit; }
   text-decoration: none;
   color: var(--latte);
   transition: color .2s;
+  background: linear-gradient(var(--blush), var(--blush)) left bottom / 0% 1px no-repeat;
+  padding-bottom: .2rem;
+  transition: color .2s, background-size .3s ease;
 }
 
-.nav__links a:hover { color: var(--cream); }
+.nav__links a:hover { color: var(--cream); background-size: 100% 1px; }
+
+.nav__links a.active { color: var(--cream); background-size: 100% 1px; }
 
 .nav__right { display: flex; align-items: center; gap: 1.1rem; }
 
@@ -204,10 +216,12 @@ a { color: inherit; }
   margin-right: .55rem;
 }
 
-/* фото в «миндальной» маске — лист/глаз */
+/* фото в «миндальной» маске — лист/глаз; стопка кадров для crossfade */
 .hero__photo {
   justify-self: center;
   width: min(100%, 26rem);
+  aspect-ratio: 8 / 9;
+  position: relative;
   border-radius: 55% 45% 55% 45% / 62% 48% 52% 38%;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -215,7 +229,23 @@ a { color: inherit; }
   outline-offset: 14px;
 }
 
-.hero__photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.4s ease, transform 6s ease;
+}
+
+.hero__photo img.is-active { opacity: 1; transform: scale(1); }
+
+/* заголовок hero: трекинг мягко сжимается при появлении */
+.hero__title { letter-spacing: .07em; }
+
+.hero__title.in-view { letter-spacing: .02em; }
 
 /* ============ lash-разделитель (сигнатура) ============ */
 .lashline {
@@ -400,6 +430,8 @@ a { color: inherit; }
   overflow: hidden;
   border-radius: .4rem;
   aspect-ratio: 4 / 5;
+  position: relative;
+  cursor: zoom-in;
 }
 
 .works img {
@@ -409,7 +441,30 @@ a { color: inherit; }
   transition: transform .6s ease;
 }
 
-.works figure:hover img { transform: scale(1.045); }
+.works figure::after {
+  content: '+';
+  position: absolute;
+  right: .7rem;
+  bottom: .6rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--body);
+  font-size: 1.15rem;
+  color: var(--cream);
+  background: rgba(26, 18, 15, .55);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.works figure:hover img,
+.works figure:focus-visible img { transform: scale(1.045); }
+
+.works figure:hover::after,
+.works figure:focus-visible::after { opacity: 1; }
 
 .works__more {
   margin-top: 2rem;
@@ -540,6 +595,99 @@ a { color: inherit; }
 
 .reveal.in-view { opacity: 1; transform: none; }
 
+/* ============ лайтбокс галереи ============ */
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 12, 9, .96);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s;
+}
+
+.lb.open { opacity: 1; visibility: visible; }
+
+.lb__stage {
+  max-width: min(92vw, 60rem);
+  text-align: center;
+}
+
+.lb__stage img {
+  max-width: 100%;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: .4rem;
+}
+
+.lb__swap { animation: lb-in .35s ease; }
+
+@keyframes lb-in {
+  from { opacity: 0; transform: scale(.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lb__stage figcaption {
+  margin-top: .9rem;
+  font-size: .82rem;
+  letter-spacing: .1em;
+  color: var(--latte);
+}
+
+.lb__count {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .8rem;
+  letter-spacing: .2em;
+  color: var(--latte);
+}
+
+.lb__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  font-family: var(--body);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color .25s, color .25s;
+}
+
+.lb__btn:hover { border-color: var(--blush); color: var(--blush); }
+
+.lb__close { top: 1rem; right: 1.2rem; }
+
+.lb__prev { left: 1.2rem; top: 50%; transform: translateY(-50%); }
+
+.lb__next { right: 1.2rem; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 860px) {
+  .lb__prev { left: .4rem; }
+  .lb__next { right: .4rem; }
+  .lb__stage img { max-height: 74vh; }
+}
+
+/* ============ плавная смена языка ============ */
+main { transition: opacity .16s ease; }
+
+main.i18n-fade { opacity: 0; }
+
+/* якоря не прячутся под шапкой */
+section[id] { scroll-margin-top: 4.5rem; }
+
 /* ============ мобильная версия ============ */
 @media (max-width: 860px) {
   .nav__links { display: none; }
@@ -588,11 +736,20 @@ a { color: inherit; }
 
   .reveal,
   .lashline__hairs line,
-  .works img {
+  .works img,
+  .hero__photo img,
+  .btn,
+  main {
     transition: none;
   }
 
   .reveal { opacity: 1; transform: none; }
 
   .lashline__hairs line { transform: scaleY(1); }
+
+  .hero__photo img { transform: none; }
+
+  .hero__title { letter-spacing: .02em; }
+
+  .lb__swap { animation: none; }
 }
