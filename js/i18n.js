@@ -39,6 +39,10 @@ const I18N = {
     'works.more': 'Viac prác na Instagrame',
     'reviews.title': 'Klientky píšu',
     'reviews.note': 'Z komentárov na Instagrame',
+    'reviews.t1': 'Ďakujem, Maryna, veľmi sa mi to páči',
+    'reviews.t2': 'Veľmi krásne, ďakujem',
+    'reviews.t3': 'Nádhera',
+    'reviews.t4': 'Dokonalé',
     'about.title': 'O mne',
     'about.p1': 'Volám sa Maryna. S mihalnicami a obočím pracujem tak, aby som zvýraznila to, čo už máte — nie aby som vás schovala za „efekt“.',
     'about.p2': 'Používam overené materiály, dbám na sterilitu a tvar aj ohyb vždy prispôsobím vašim črtám. Po procedúre vám poradím, ako sa o výsledok starať, aby vydržal čo najdlhšie.',
@@ -100,6 +104,10 @@ const I18N = {
     'works.more': 'More work on Instagram',
     'reviews.title': 'Clients say',
     'reviews.note': 'From Instagram comments',
+    'reviews.t1': 'Thank you, Maryna, I love it',
+    'reviews.t2': 'So beautiful, thank you',
+    'reviews.t3': 'Gorgeous',
+    'reviews.t4': 'Perfect',
     'about.title': 'About me',
     'about.p1': 'My name is Maryna. I work with lashes and brows to bring out what you already have — not to hide you behind an "effect".',
     'about.p2': 'I use trusted materials, keep everything sterile, and always match the shape and curl to your features. Afterwards I\'ll tell you how to care for the result so it lasts as long as possible.',
@@ -161,6 +169,10 @@ const I18N = {
     'works.more': 'További munkák Instagramon',
     'reviews.title': 'Vendégeim írták',
     'reviews.note': 'Instagram-kommentekből',
+    'reviews.t1': 'Köszönöm, Maryna, nagyon tetszik',
+    'reviews.t2': 'Nagyon szép, köszönöm',
+    'reviews.t3': 'Gyönyörű',
+    'reviews.t4': 'Tökéletes',
     'about.title': 'Rólam',
     'about.p1': 'Maryna vagyok. Úgy dolgozom a szempillákkal és a szemöldökkel, hogy azt emeljem ki, ami már megvan — nem rejtem el egy „effekt” mögé.',
     'about.p2': 'Bevált anyagokkal dolgozom, ügyelek a sterilitásra, a formát és az ívet mindig az arcvonásokhoz igazítom. A kezelés után elmondom, hogyan ápolja az eredményt, hogy minél tovább tartson.',
@@ -222,6 +234,10 @@ const I18N = {
     'works.more': 'Більше робіт в Instagram',
     'reviews.title': 'Клієнтки пишуть',
     'reviews.note': 'З коментарів в Instagram',
+    'reviews.t1': 'Дякую, Марино, дуже подобається',
+    'reviews.t2': 'Дуже гарно, дякую',
+    'reviews.t3': 'Краса',
+    'reviews.t4': 'Ідеальні',
     'about.title': 'Про мене',
     'about.p1': 'Мене звати Марина. Я працюю з віями та бровами так, щоб підкреслити те, що у вас вже є — а не сховати вас за «ефектом».',
     'about.p2': 'Використовую перевірені матеріали, стежу за стерильністю і завжди підбираю форму та вигин під ваші риси. Після процедури розповім, як доглядати за результатом, щоб він тримався якнайдовше.',
@@ -270,6 +286,10 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const t = dict[el.dataset.i18n];
     if (t) el.textContent = t;
+  });
+  // оригинал отзывов — украинский/русский; на UA перевод-подпись избыточна
+  document.querySelectorAll('.reviews__tr').forEach((el) => {
+    el.style.display = lang === 'uk' ? 'none' : '';
   });
   document.documentElement.lang = lang;
   document.title = I18N_META[lang].title;

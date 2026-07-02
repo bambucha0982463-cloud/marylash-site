@@ -494,6 +494,14 @@ a { color: inherit; }
   line-height: 1.45;
 }
 
+.reviews__tr {
+  margin-top: .55rem;
+  font-size: .84rem;
+  color: var(--latte);
+}
+
+.reviews__tr::before { content: '— '; }
+
 .reviews__card figcaption {
   margin-top: .8rem;
   font-size: .78rem;
