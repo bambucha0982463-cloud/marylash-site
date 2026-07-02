@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "marylash-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8741", "--directory", "C:\\Claud Code\\Project\\marylash-site"],
+      "port": 8741
+    }
+  ]
+}
